@@ -1,0 +1,8 @@
+{%- if include.keywords.size > 0 -%}
+<keywords class="post-meta">
+    {% for kw in include.keywords %}
+    <keyword>{{ kw }}</keyword>
+    {% endfor %}
+</keywords>
+<span>&nbsp;</span>
+{%- endif -%}

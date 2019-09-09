@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- include postcard.html
+          post=post -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="feed-subscribe">
+      <a href="{{ 'feed.xml' | relative_url }}">
+        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>订阅</span>
+      </a>
+    </p>
+  {%- endif -%}
+
+</div>
