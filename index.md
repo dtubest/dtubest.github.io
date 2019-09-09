@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+permalink: /
 list_title: 列表
 ---
 > 本博暂无干货，很湿，很湿。。。
